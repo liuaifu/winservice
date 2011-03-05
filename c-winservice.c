@@ -1,6 +1,6 @@
-// Copyright 2010 The Go Authors.  All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// author: saturnfive
+// laf163@gmail.com
+// 2011-3-4
 
 #include "winservice.h"
 #include "_cgo_export.h"
