@@ -59,7 +59,7 @@ void ControlHandler(DWORD request)
 	return; 
 }
 
-void ThreadFunc(void *parg)
+BOOL WINAPI ThreadFunc(void *parg)
 {
 	SERVICE_TABLE_ENTRY ServiceTable[2];
 	ServiceTable[0].lpServiceName = g_szServiceName;
@@ -68,6 +68,8 @@ void ThreadFunc(void *parg)
 	ServiceTable[1].lpServiceName = NULL;
 	ServiceTable[1].lpServiceProc = NULL;
 	StartServiceCtrlDispatcher(ServiceTable);
+
+	return TRUE;
 }
 
 void start(char *name)
