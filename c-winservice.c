@@ -74,7 +74,8 @@ void start(char *name)
 {
 	strcpy(g_szServiceName, name);
 
-	_beginthread(ThreadFunc,0,NULL);
+	//_beginthread(ThreadFunc,0,NULL);
+	CreateThread(NULL, 0, ThreadFunc, NULL, 0, NULL);
 }
 
 void stop()
