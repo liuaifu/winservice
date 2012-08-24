@@ -1,6 +1,6 @@
 winserver v0.1
 
-这是一个用于创建Win32服务的包，这个包在GPLv2下发布。
+这是一个用于创建Win32服务的包，这个包基于GPLv2发布。
 This is a package for create win32 service, it under GPLv2.
 
 example:
@@ -30,7 +30,6 @@ func main() {
 	return
 }
 
-土星五号
-saturnfive
+liuaifu
 laf163@gmail.com
 2011-3-4
