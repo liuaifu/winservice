@@ -6,6 +6,8 @@
 #include "_cgo_export.h"
 #include "windows.h"
 
+extern void NoticeServiceStopped();
+
 static char g_szServiceName[64] = "GoService1";
 
 void ControlHandler(DWORD ); 
@@ -43,12 +45,18 @@ void ControlHandler(DWORD request)
 			ServiceStatus.dwWin32ExitCode = 0; 
 			ServiceStatus.dwCurrentState = SERVICE_STOPPED; 
 			SetServiceStatus (hStatus, &ServiceStatus);
+
+			NoticeServiceStopped();
+
 			return; 
 
 		case SERVICE_CONTROL_SHUTDOWN: 
 			ServiceStatus.dwWin32ExitCode = 0; 
 			ServiceStatus.dwCurrentState = SERVICE_STOPPED; 
 			SetServiceStatus (hStatus, &ServiceStatus);
+
+			NoticeServiceStopped();
+
 			return; 
 
 		default:
