@@ -6,10 +6,14 @@ package main
 
 import (
 	"time"
-	"winservice"
+	"github.com/liuaifu/winservice"
 )
 
 func main() {
+	winservice.OnServiceStopped = func() {
+		//服务已关闭
+	}
+
 	/**
 	* 这个GoService1替换为你创建的服务名，创建服务的命令如下：
 	* 注意：等号后的空格必不可少
